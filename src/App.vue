@@ -2,10 +2,6 @@
 
 	#app(@onkeyup="showKeyCode(event)")
 		navigation#nav
-		transition(name="slide-fade")
-			#mobileSideBar(v-if='showMobileMen')
-				sidebar#sidebar(style='display:block;')
-				#hideMenu(@click='showMobileMen=false')
 		#content
 			#mobileBtn(@click='showMobileMen=true' v-if='this.$store.state.UI.Button')
 				span#menu.fa.fa-bars
@@ -17,7 +13,6 @@
 <script>
 /* eslint-disable */
 require('font-awesome-webpack')
-import sidebar from './components/sidebar'
 import navigation from './components/navigation'
 // require('jquery')
 // require('jquery-ui-bundle')
@@ -29,7 +24,6 @@ export default {
   },
   name: 'app',
   components: {
-    sidebar,
     navigation
     // contentBox
   },

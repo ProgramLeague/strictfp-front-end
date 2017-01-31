@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="logo-logo">
-      <b>P</b>rogram<span><b>L</b>eague</span>
+      <router-link to="content"><b>P</b>rogram<span><b>L</b>eague</span></router-link>
     </div>
   </div>
 </template>

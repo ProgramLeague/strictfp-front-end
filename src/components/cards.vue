@@ -2,7 +2,7 @@
     .cards
       .text
         a.title {{title}}
-        .content {{content}}
+        <div v-html="content" class="content"></div>
         .info {{author}} &nbsp {{time}}
 </template>
 <style lang="less">
@@ -30,6 +30,12 @@
     color: #000;
     height: auto;
     font-size: 1em;
+    p{
+      text-align: left;
+    }
+    h1,h2,h3,h4{
+      font-size: 1em;
+    }
 }
 .info {
     color: #999;
@@ -55,7 +61,6 @@ export default {
   props: ['title', 'content', 'link', 'time', 'author'],
   data () {
     return {
-      pic: require('../assets/lz.jpg')
     }
   }
 }

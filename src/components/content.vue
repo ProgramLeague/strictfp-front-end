@@ -2,7 +2,7 @@
   #warp
     #all
       .container-left
-        card.card(v-for='item in this.$store.state.fetched.data' v-bind:title='item.title' v-bind:content='item.content' v-bind:time='item.time' v-bind:author='item.authorInfo.name')
+        card.card(v-for='item in this.$store.state.clone' v-bind:title='item.title' v-bind:content='item.content')
       containerRight.container-right
 </template>
 <script>

@@ -2,6 +2,9 @@
 <div class="navigation_warp">
   <div class="navigation">
     <logo id="logo"></logo>
+    <ul>
+      <li> <router-link to="bolg_moving">渲染测试</router-link></li>
+    </ul>
     <!-- <search id="search"></search> -->
   </div>
 </div>
@@ -17,7 +20,7 @@
     margin: 0 auto;
     /*box-shadow: 0 0 13px rgba(0, 0, 0, 0.1);*/
     ul {
-        float: left;
+        float: right;
         width: auto;
         height: 4rem;
         margin: 0;
@@ -38,6 +41,10 @@
         height: 4rem;
         float: left;
     }
+    a{
+      text-decoration: none;
+      color:#666;
+    }
 }
 </style>
 <script>
@@ -47,6 +54,8 @@ export default {
   components: {
     search,
     logo
+  },
+  methods: {
   }
 }
 </script>
