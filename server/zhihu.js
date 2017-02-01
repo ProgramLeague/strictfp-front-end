@@ -19,6 +19,7 @@ app.get('/zhihu', function (req, res) {
             res.header("Content-Type", "application/json;charset=unicode")
             data = Buffer.concat( ajaxData, len ).toString();
             res.send(data)
+            ajaxData = []
             console.log(data)
         })
     })
