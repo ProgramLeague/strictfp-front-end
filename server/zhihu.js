@@ -4,6 +4,8 @@ var https = require('https')
 var ajaxData = []
 var len = 0
 app.get('/zhihu', function (req, res) {
+    ajaxData = []
+    len = 0
     https.get('https://zhuanlan.zhihu.com/api/columns/' + req.query.username + '/posts?limit=10&offset=0', function (ajax) {
         ajax.on("data", function (data) {
           ajaxData.push(data);
@@ -19,8 +21,7 @@ app.get('/zhihu', function (req, res) {
             res.header("Content-Type", "application/json;charset=unicode")
             data = Buffer.concat( ajaxData, len ).toString();
             res.send(data)
-            ajaxData = []
-            console.log(data)
+            console.log(data.length)
         })
     })
 })
