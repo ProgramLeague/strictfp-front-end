@@ -1,7 +1,7 @@
 <template lang="pug">
     div#bolg_moving
       p 这是一个测试页面
-      p 输入知乎专栏地址，我们将把知乎专栏的内容渲染到时间线中。
+      p 输入知乎专栏地址，然后回到时间线查看。
       div.input-warp
         <input v-model="username">
       .single-btn-warp

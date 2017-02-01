@@ -20,7 +20,7 @@ export default {
 </script>
 <style lang="less">
 .card {
-    padding: 1rem 0;
+    margin: 1rem 0;
     flex-wrap: wrap;
     flex-flow: row;
 }
